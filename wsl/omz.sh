@@ -4,7 +4,6 @@ sudo apt update
 
 ### packages
 INITIAL=(
-	curl
 	zsh
 )
 
@@ -43,8 +42,4 @@ install_packages "INITIAL" INITIAL
 # curl installs
 echo ""
 echo "### Installing via curl sh"
-install_via_curl "uv" "https://astral.sh/uv/install.sh"
-install_via_curl "opencode" "https://opencode.ai/install"
-
-# set zsh as shell
-chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
